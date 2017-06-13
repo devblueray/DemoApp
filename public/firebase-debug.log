@@ -1,0 +1,27 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /root/.nvm/versions/node/v7.10.0/bin/node /root/.nvm/versions/node/v7.10.0/bin/firebase serve
+[debug] CLI Version:  3.9.0
+[debug] Platform:     linux
+[debug] Node Version: v7.10.0
+[debug] Time:         Fri Jun 09 2017 02:16:51 GMT+0000 (UTC)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/project-1778606989379417911  
+ Fri Jun 09 2017 02:16:51 GMT+0000 (UTC)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/project-1778606989379417911/tokens  
+ Fri Jun 09 2017 02:16:52 GMT+0000 (UTC)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/root/messagetest'...
+[info] 
+[debug] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/project-1778606989379417911  
+ Fri Jun 09 2017 02:16:52 GMT+0000 (UTC)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/726501193964/clients/_:getWebAppConfig  
+ Fri Jun 09 2017 02:16:52 GMT+0000 (UTC)
+[debug] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

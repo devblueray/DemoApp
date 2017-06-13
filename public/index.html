@@ -1,0 +1,79 @@
+<html><head>
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+     <body>
+         <button id="test-btn">Click to call </button> 
+         <textarea id="key" rows="4" cols="50"></textarea>
+         <textarea id="message" rows="4" cols="50"></textarea>
+         <div id="temp">Hello World</div>
+         <div style="visibility:hidden" id="confirm-div">Waiting for confirmation
+         </div>
+     </body>
+<script>
+document.getElementById('test-btn').onclick = function(e) {
+
+    var confirmDiv = document.getElementById('confirm-div')	
+	confirmDiv.style.visibility="visible";
+
+	messaging.onMessage(function(payload) {
+    console.log(Object.getOwnPropertyNames(payload.notification));
+    console.log("Message recieved: ", payload.notification.body);
+    document.getElementById("message").value = payload.notification.body;
+    if (payload.notification.body === 'yes') {
+    	confirmDiv.innerHTML = "woo"
+	} else {
+    	confirmDiv.innerHTML = "fuck off francis";	
+	}
+    });
+}
+
+
+
+  // Initialize Firebase
+  var msg = "";
+  var config = {
+    apiKey: "AIzaSyAGIzbtiI3cZuXucfVYL5yOmAeof3SXYTQ",
+    authDomain: "project-1778606989379417911.firebaseapp.com",
+    databaseURL: "https://project-1778606989379417911.firebaseio.com",
+    projectId: "project-1778606989379417911",
+    storageBucket: "project-1778606989379417911.appspot.com",
+    messagingSenderId: "726501193964"
+  };
+  firebase.initializeApp(config);
+
+  var msgSuccess = function() {
+    
+  }
+  const messaging = firebase.messaging();
+  messaging.requestPermission()
+        .then(function() {
+            console.log('enabled');
+            messaging.getToken()
+                .then(function(currentToken) {
+                    if (currentToken) {
+                        console.log(currentToken);
+                        document.getElementById("key").value = currentToken;
+                    }
+                })
+                .catch(function(err) {
+                    console.log('No token fo you!', err);
+                });
+            messaging.onMessage(function(payload) {
+                console.log(Object.getOwnPropertyNames(payload.notification));
+                console.log("Message recieved: ", payload.notification.body);
+                document.getElementById("message").value = payload.notification.body;
+                if (payload.notification.body === 'yes') {
+                    document.getElementById('temp').style.display = 'block';
+                } else {
+                    document.getElementById('temp').style.display = 'none';
+                }
+            });
+
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+
+
+</script>
+</html>
