@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="false" android:drawable="@color/loginButton">
+        <!--<shape>-->
+            <!--<stroke-->
+                <!--android:color="@color/loginButton"/>-->
+            <!--<solid android:color="@color/loginButton" />-->
+        <!--</shape>-->
+    </item>
+
+    <item android:state_focused="true" android:drawable="@color/loginButtonShadow">
+        <!--<shape>-->
+            <!--<stroke-->
+                <!--android:color="@color/loginButtonShadow"/>-->
+            <!--<solid android:color="@color/loginButtonShadow" />-->
+        <!--</shape>-->
+    </item>
+
+    <item android:state_pressed="true" android:drawable="@color/loginButtonShadow">
+        <!--<shape>-->
+            <!--<stroke-->
+                <!--android:color="@color/loginButton"/>-->
+            <!--<solid android:color="@color/loginButton" />-->
+        <!--</shape>-->
+    </item>
+
+    <item android:state_pressed="true" android:state_enabled="false" android:drawable="@color/loginButtonShadow">
+        <!--<shape>-->
+            <!--<stroke-->
+                <!--android:color="@color/loginButton"/>-->
+            <!--<solid android:color="@color/loginButton" />-->
+        <!--</shape>-->
+    </item>
+</selector>
