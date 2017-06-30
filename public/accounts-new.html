@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400, 700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <meta charset="UTF-8">
+    <title>Account List</title>
+</head>
+<body id="accountPageBody">
+<div class="container">
+    <div class="item"><img src="assets/gt_bank_title.png"></div>
+    <div class="dropdown">
+        <span>Menu</span>
+        <div class="dropdown-content">
+           <button id="login_btn">Transfer</button>
+        </div>
+    </div>
+    <div class="item"><p>Welcome, Bart!</p></div>
+    <div class="item"><p>Last Login was 1/1/2017</p></div>
+    <div class="item"><p>Last Activity: +4,567,224.00 to Checking</p></div>
+    <div class="container" id="accounts">
+
+        <div class="newcolor"><div class="circle">1234</div><div class="acctName">Credit</div></div><br>
+        <div class="newcolor"><div class="circle">5678</div><div class="acctName">Savings</div></div><br>
+        <div class="newcolor"><div class="circle">1212</div><div class="acctName">Checking</div></div>
+
+    </div>
+
+    <div id="transfer_box">
+        <form>
+           Transfer: <input type="text" name="amount"> from   <select>
+            <option value="from_checking">Checking</option>
+            <option value="from_savings">Savings</option>
+            <option value="from_credit">Credit</option>
+        </select>
+
+            to
+            <select>
+                <option value="to_checking">Checking</option>
+                <option value="to_savings">Savings</option>
+                <option value="to_credit">Credit</option>
+            </select>
+        </form>
+    </div>
+
+</div>
+<button style="visibility: visible" id="test-btn">Click to call </button>
+<textarea style="visibility: visible" id="key" rows="4" cols="50"></textarea>
+<textarea style="visibility: visible" id="message" rows="4" cols="50"></textarea>
+</body>
+<script src="main.js"></script>
+</html>
