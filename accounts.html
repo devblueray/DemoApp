@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <link rel="stylesheet" href="divtest.css">
+    <title>Divtest</title>
+</head>
+<body>
+<div id="confirmationWindow">Waiting for Confirmation</div>
+<div class="container">
+    <div id="bankTop">
+        <span><img src="public/assets/gt_bank_title.png"></span>
+
+    </div>
+    <div id="bankBot">
+
+        <div class="acctContainer">
+            <span class="acctName">Checking</span>
+            <span class="acctAmount">$32,222,990</span>
+            <div class="acctNum">...2233</div>
+        </div>
+        <br>
+        <div class="acctContainer">
+            <span class="acctName">Savings</span>
+            <span class="acctAmount">$32,222,990</span>
+            <div class="acctNum">...4244</div>
+
+        </div>
+        <br>
+        <div class="acctContainer">
+            <span class="acctName">Credit</span>
+            <span class="acctAmount">$222,990</span>
+            <div class="acctNum">...7232</div>
+
+        </div>
+        <span id="transferContainer"><div id="transferForm">
+            Transfer $<input type="text" id="transferAmount"></div>
+            From: Checking (2233)<br>
+            To: Savings: (4244)<br>
+            <button id="transfer-btn">Transfer</button>
+        </span>
+    </div>
+
+</div>
+<div class="footerBear"><img class="footerBear" src="public/assets/Flag-of-California-Bear.png"></div>
+</body>
+</html>
+<script src="public/main.js"></script>

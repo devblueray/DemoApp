@@ -69,8 +69,10 @@ getUserToken(username); //"Solves" race condition
 
 
 
-document.getElementById('test-btn').onclick = function(e) {
+document.getElementById('transfer-btn').onclick = function(e) {
     console.log(mobileID);
+    var amount = document.getElementById("transferAmount").value;
+    console.log(amount);
     var data = "{\"to\" : \"" + mobileID + "\",\"notification\": {\"title\": \"Golden Trust Bank\",\"body\": \"Incoming transfer request\"},\"data\" : {\"id\" : \"" + token + "\",\"msg\" : \"Transfer $1000 from Checking(3222) to Savings(4221)\"}}"
     xmlhttp = new XMLHttpRequest();
     var url = "https://fcm.googleapis.com/fcm/send";

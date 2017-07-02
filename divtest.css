@@ -1,0 +1,126 @@
+#confirmationWindow {
+    margin:0 auto;
+    height:500px;
+    width:500px;
+    background: #FFF;
+    z-index:101;
+}
+.container {
+    margin: 0 auto;
+    width: auto;
+    height: 600px;
+    top: 0px;
+}
+.item {
+    display: inline;
+}
+
+.circle {
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    font-size:15px;
+    color:blue;
+    line-height:50px;
+    text-align: center;
+    background: #000;
+}
+#bankTop {
+    height:10%;
+    background: url("public/assets/gt_bg_640_n.png");
+    background-size:cover;
+    margin: 0 auto;
+
+}
+
+#bankBot {
+    height: 50%;
+    background-color: white;
+    margin: 0 auto;
+}
+#span1 {
+    position: relative;
+    top:10%;
+    left: 5px;
+    width: 70%;
+
+}
+
+body{
+    background: gray;
+    padding:0;
+    margin:0 0;
+    overflow: hidden;
+}
+.acctName {
+    font-size: 50px;
+    font-family: sans-serif;
+    font-size: 23px;
+    color: red;
+}
+
+.acctContainer {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    box-shadow: 4px 4px 5px grey;
+    padding: 5px;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    width: 240px;
+}
+
+#transferContainer {
+    position: relative;
+    left: 500px;
+    border: 1px;
+}
+
+.acctNum {
+    position: relative;
+    left: 70px;
+    font-family:sans-serif;
+    font-weight: 100;
+}
+
+.acctAmount {
+    position: relative;
+    left: 20%;
+    font-family:sans-serif;
+    font-weight:bolder;
+}
+#menu {
+    position: relative;
+    top: -20px;
+    left: 125px;
+}
+
+.footerBear {
+    height: 100px;
+    width: auto;
+    position: relative;
+    top: 134px;
+    left: 45%;
+}
+
+
+#xfer {
+    background: darkblue;
+    background-image: url(public/assets/gt_bullet_accounts.png);
+    background-size: 30px;
+    background-position: 0px 3px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-top: 11px;
+    padding-bottom: 20px;
+    width: 123px;
+    height: 35px;
+    color: white;
+    text-align: center;
+    border: 0;
+    position: relative;
+    top: 0px;
+    left: -52px;
+    font-family: sans-serif;
+}
