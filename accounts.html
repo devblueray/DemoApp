@@ -4,46 +4,54 @@
     <meta charset="UTF-8">
     <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
     <link rel="stylesheet" href="divtest.css">
-    <title>Divtest</title>
+    <title>Accounts</title>
 </head>
 <body>
-<div id="confirmationWindow">Waiting for Confirmation</div>
 <div class="container">
     <div id="bankTop">
-        <span><img src="public/assets/gt_bank_title.png"></span>
+        <span><img src="assets/gt_bank_title.png"></span>
 
     </div>
     <div id="bankBot">
 
         <div class="acctContainer">
             <span class="acctName">Checking</span>
-            <span class="acctAmount">$32,222,990</span>
-            <div class="acctNum">...2233</div>
+            <span class="acctAmount" id="checking">$253,089.01</span>
+            <div class="acctNum">...5167</div>
         </div>
         <br>
         <div class="acctContainer">
             <span class="acctName">Savings</span>
-            <span class="acctAmount">$32,222,990</span>
-            <div class="acctNum">...4244</div>
+            <span class="acctAmount" id="savings">$2,164,104.63</span>
+            <div class="acctNum">...4261</div>
 
         </div>
         <br>
         <div class="acctContainer">
             <span class="acctName">Credit</span>
-            <span class="acctAmount">$222,990</span>
-            <div class="acctNum">...7232</div>
+            <span class="acctAmount" id="credit">$3,771.56</span>
+            <div class="acctNum">...5262</div>
 
         </div>
-        <span id="transferContainer"><div id="transferForm">
+
+        <div id="rightBar">Common Tasks
+            <div id="transferContainer"><div id="transferForm">
             Transfer $<input type="text" id="transferAmount"></div>
-            From: Checking (2233)<br>
-            To: Savings: (4244)<br>
+            From: Checking (5167)<br>
+            To: Savings: (4261)<br>
             <button id="transfer-btn">Transfer</button>
-        </span>
+        </div></div>
     </div>
 
 </div>
-<div class="footerBear"><img class="footerBear" src="public/assets/Flag-of-California-Bear.png"></div>
+
+<div id="confirmationWindow">
+
+    <div class="loader"></div>
+    <div id="confText">Waiting for Confirmation</div>
+</div>
+
 </body>
+<div class="footerBear"><img class="footerBear" src="assets/Flag-of-California-Bear.png"></div>
 </html>
-<script src="public/main.js"></script>
+<script src="main.js"></script>

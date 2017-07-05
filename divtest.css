@@ -1,9 +1,24 @@
 #confirmationWindow {
     margin:0 auto;
-    height:500px;
+    height:300px;
     width:500px;
     background: #FFF;
     z-index:101;
+    position: absolute;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    border-width: 1px;
+    border-style:solid;
+
+}
+
+#confText {
+    font-family: sans-serif;
+    color: red;
+    font-size: 30px;
+    text-align: center;
 }
 .container {
     margin: 0 auto;
@@ -27,7 +42,7 @@
 }
 #bankTop {
     height:10%;
-    background: url("public/assets/gt_bg_640_n.png");
+    background: url("assets/gt_bg_640_n.png");
     background-size:cover;
     margin: 0 auto;
 
@@ -69,12 +84,17 @@ body{
     top: 50px;
     left: 10px;
     width: 240px;
+    height: 50px;
 }
 
 #transferContainer {
     position: relative;
     left: 500px;
-    border: 1px;
+    border-style: solid;
+    border-width: 1px;
+    width: 200px;
+    top: -164px;
+
 }
 
 .acctNum {
@@ -86,9 +106,10 @@ body{
 
 .acctAmount {
     position: relative;
-    left: 20%;
-    font-family:sans-serif;
-    font-weight:bolder;
+    right: 1%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    float: right;
 }
 #menu {
     position: relative;
@@ -99,15 +120,29 @@ body{
 .footerBear {
     height: 100px;
     width: auto;
-    position: relative;
-    top: 134px;
-    left: 45%;
+    position: absolute;
+    bottom:0;
+    right: 0;
 }
 
+#transferAmount {
+    background: wheat;
+    background-image: url("assets/gt_username_128.png");
+    background-size: 30px;
+    background-position: 0px 5px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    width: 300px;
+    height: 10px;
+    color: black;
+    text-align: center;
+}
 
 #xfer {
     background: darkblue;
-    background-image: url(public/assets/gt_bullet_accounts.png);
+    background-image: url(assets/gt_bullet_accounts.png);
     background-size: 30px;
     background-position: 0px 3px;
     background-repeat: no-repeat;
@@ -124,3 +159,46 @@ body{
     left: -52px;
     font-family: sans-serif;
 }
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-left: 1.1em solid #000000;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
